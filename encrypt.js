@@ -5,11 +5,11 @@ async function encrypt() {
     const privateKey = '0x8CE0966AB535210F2E64C7CD9E5272756A6E0E73CB811E7FB6476AAB55B9ED5A'
 
     var encrypt = cryptojs.AES.encrypt(privateKey, hashedPassword)
-    console.log("Encrypted String", encrypt.toString())
+    console.log("Encrypted Private Key", encrypt.toString())
     
     var bytes = cryptojs.AES.decrypt(encrypt, hashedPassword);
     var originalText = bytes.toString(cryptojs.enc.Utf8);
-    console.log("Decrypted Message", originalText); 
+    console.log("Decrypted Private Key", originalText); 
 }
 
 encrypt()
